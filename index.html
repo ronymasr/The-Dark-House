@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dark House</title>
+    <!-- إضافة مكتبة Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- إضافة خط Creepster (خط دموي) من Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #181818;
+            color: #f5f5f5;
+            font-family: 'Cairo', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+        }
+        header {
+            background: #222;
+            padding: 20px 0;
+            box-shadow: 0 2px 8px #000a;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 900px;
+            margin: auto;
+            padding: 0 20px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            color: #950505;
+            text-shadow: 2px 2px 8px #000a;
+        }
+        .social-icons a {
+            color: #f5f5f5;
+            margin-left: 10px;
+            font-size: 2em;
+            transition: color 0.3s;
+            vertical-align: middle;
+        }
+        .social-icons a:hover {
+            color: #e94560;
+        }
+        main {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #222;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px #000a;
+        }
+        h2 {
+            color: #f5f5f5;
+            border-right: 4px solid #e94560;
+            padding-right: 12px;
+            margin-top: 0;
+        }
+        .bubble {
+            background: #292929;
+            border: 2px solid #e94560;
+            border-radius: 18px;
+            padding: 18px 22px;
+            margin: 18px 0;
+            box-shadow: 0 2px 12px #0007;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .bubble:hover {
+            background: #1a1a1a;
+            transform: scale(1.03);
+        }
+        .stories-container {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .story-inner-bubble {
+            background: #232323;
+            border: 1px solid #e94560;
+            border-radius: 12px;
+            padding: 12px;
+            flex: 1 1 45%;
+            min-width: 140px;
+            max-width: 220px;
+            margin: 8px 0;
+            box-shadow: 0 1px 6px #0005;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .story-inner-bubble img {
+            width: 100%;
+            max-width: 120px;
+            border-radius: 8px;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .story-inner-bubble h3 {
+            font-size: 1.1em;
+            margin: 0 0 6px 0;
+            color: #e94560;
+        }
+        .story-inner-bubble p {
+            font-size: 0.95em;
+            margin: 0 0 8px 0;
+            text-align: center;
+        }
+        .details-btn {
+            display: inline-block;
+            margin-top: auto;
+            padding: 6px 16px;
+            background: #e94560;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.95em;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+        .details-btn:hover {
+            background: #b32b3a;
+        }
+        @media (max-width: 600px) {
+            .stories-container {
+                flex-direction: column;
+                gap: 0;
+            }
+            .story-inner-bubble {
+                max-width: 100%;
+                min-width: 0;
+                margin: 10px auto;
+            }
+        }
+        footer {
+            text-align: center;
+            padding: 18px 0;
+            background: #181818;
+            color: #888;
+            font-size: 1em;
+            margin-top: 40px;
+            border-top: 1px solid #333;
+        }
+        /* إضافة تنسيق العنوان الرئيسي */
+        .main-title {
+            text-align: center;
+            font-size: 2.7em;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 18px;
+            margin-top: 10px;
+            letter-spacing: 2px;
+            /* تأثير دموي */
+           
+            font-family: 'Creepster', 'Cairo', Arial, sans-serif;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <!-- إضافة صورة اللوجو قبل العنوان -->
+            <img src="logo.jpg" alt="شعار الموقع" style="height:48px; margin-left:16px; border-radius:10px;">
+            <h1> ذا دارك هاوس</h1>
+            <div class="social-icons">
+                <a href="#" title="فيسبوك"><i class="fab fa-facebook"></i></a>
+                <a href="#" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" title="إنستغرام"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <!-- إضافة عنوان the dark house بخط عريض وتأثير دموي -->
+        <div class="main-title">THE DARK HOUSE</div>
+        <section>
+            <div class="bubble">
+                <h2>من نحن</h2>
+                <p>
+                    نحن فريق شغوف بعالم الرعب والغموض، نقدم لك قصصًا مشوقة وتجارب لا تُنسى في عالم الظلام.
+                </p>
+            </div>
+            <div class="bubble">
+                <h2>لماذا نحن؟</h2>
+                <p>
+                    لأننا نؤمن أن لكل قصة رعب طابعها الخاص، ونحرص على تقديم محتوى أصلي ومثير يجعلك تعيش أجواء الرعب الحقيقية.
+                </p>
+            </div>
+            <div class="bubble">
+                <h2>قصص الرعب</h2>
+                <div class="stories-container">
+                    <div class="story-inner-bubble">
+                        <img src="qasas.jpg" alt="صورة القصة 1">
+                        <h3>القصاص</h3>
+                        <p>معرفش القصه والله لسه</p>
+                        <a class="details-btn" href="" target="_blank">تفاصيل</a>
+                    </div>
+                    <div class="story-inner-bubble">
+                        <img src="yehia.jpg" alt="صورة القصة 2">
+                        <h3>سلخانة العزقلاني</h3>
+                        <p>دكتور يحيى مش مجنون</p>
+                        <a class="details-btn" href="" target="_blank">تفاصيل</a>
+                    </div>
+                   <div class="story-inner-bubble">
+                        <img src="nun.jpg" alt="صورة القصة 1">
+                        <h3>ذا نن</h3>
+                        <p>بيقولو حلوة</p>
+                        <a class="details-btn" href="" target="_blank">تفاصيل</a>
+                    </div>
+                    <div class="story-inner-bubble">
+                        <img src="lupin.jpg" alt="صورة القصة 1">
+                        <h3>لوبين</h3>
+                        <p>رعب بقا وكده </p>
+                        <a class="details-btn" href="" target="_blank">تفاصيل</a>
+                    </div>
+                    <div class="story-inner-bubble">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="صورة القصة 1">
+                        <h3>هنا لو في قصه نسيتها </h3>
+                        <p>نينينينينيني</p>
+                        <a class="details-btn" href="" target="_blank">تفاصيل</a>
+                    </div>
+                    <div class="story-inner-bubble">
+                        <img src="hemdan.jpg" alt="صورة القصة 1">
+                        <h3>قبر حمدان</h3>
+                        <p>تخص واحد اسمه حمدان</p>
+                        <a class="details-btn" href="" target="_blank">تفاصيل</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>حقوق الطبع والنشر &copy; 2023 ذا دارك هاوس. جميع الحقوق محفوظة.</p>
+    </footer>
+    <script>
+        // رسالة ترحيب عند تحميل الصفحة
+        window.addEventListener('DOMContentLoaded', function() {
+            alert('مرحباً بك في دارك هاوس! استعد لتجربة مخيفة...');
+        });
+
+        // عند الضغط على زر التفاصيل: رسالة ثم تحويل
+        document.querySelectorAll('.details-btn').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const url = btn.getAttribute('href');
+                alert('هل تجرؤ على قراءة هذه القصة؟ 👻');
+                window.open(url, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
