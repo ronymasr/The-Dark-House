@@ -32,7 +32,7 @@
         }
         h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 2em; /* تصغير كلمة ذا دارك هاوس اللي فوق */
             letter-spacing: 2px;
             color: #950505;
             text-shadow: 2px 2px 8px #000a;
@@ -76,19 +76,19 @@
         }
         .stories-container {
             display: flex;
-            gap: 16px;
             flex-wrap: wrap;
+            gap: 12px;
             justify-content: center;
         }
         .story-inner-bubble {
             background: #232323;
             border: 1px solid #e94560;
             border-radius: 12px;
-            padding: 12px;
-            flex: 1 1 45%;
-            min-width: 140px;
-            max-width: 220px;
-            margin: 8px 0;
+            padding: 10px;
+            flex: 1 1 44%;
+            min-width: 120px;
+            max-width: 160px;
+            margin: 6px 0;
             box-shadow: 0 1px 6px #0005;
             display: flex;
             flex-direction: column;
@@ -96,30 +96,30 @@
         }
         .story-inner-bubble img {
             width: 100%;
-            max-width: 120px;
+            max-width: 80px;
             border-radius: 8px;
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
         .story-inner-bubble h3 {
-            font-size: 1.1em;
-            margin: 0 0 6px 0;
+            font-size: 1em;
+            margin: 0 0 4px 0;
             color: #e94560;
         }
         .story-inner-bubble p {
-            font-size: 0.95em;
-            margin: 0 0 8px 0;
+            font-size: 0.85em;
+            margin: 0 0 6px 0;
             text-align: center;
         }
         .details-btn {
             display: inline-block;
             margin-top: auto;
-            padding: 6px 16px;
+            padding: 4px 12px;
             background: #e94560;
             color: #fff;
             border: none;
             border-radius: 8px;
-            font-size: 0.95em;
+            font-size: 0.85em;
             cursor: pointer;
             transition: background 0.2s;
             text-decoration: none;
@@ -127,15 +127,28 @@
         .details-btn:hover {
             background: #b32b3a;
         }
+        /* كل قصتين جنب بعض حتى على الموبايل */
         @media (max-width: 600px) {
             .stories-container {
-                flex-direction: column;
-                gap: 0;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
             }
             .story-inner-bubble {
                 max-width: 100%;
                 min-width: 0;
-                margin: 10px auto;
+                margin: 4px 0;
+                padding: 8px;
+            }
+        }
+        @media (max-width: 400px) {
+            .stories-container {
+                grid-template-columns: 1fr;
+            }
+            .story-inner-bubble {
+                max-width: 100%;
+                min-width: 0;
+                flex-basis: 100%;
             }
         }
         footer {
@@ -206,9 +219,9 @@
                         <img src="yehia.jpg" alt="صورة القصة 2">
                         <h3>سلخانة العزقلاني</h3>
                         <p>دكتور يحيى مش مجنون</p>
-                        <a class="details-btn" href="" target="_blank">تفاصيل</a>
+                        <a class="details-btn" href="https://ronymasr.github.io/yehia/" target="_blank">تفاصيل</a>
                     </div>
-                   <div class="story-inner-bubble">
+                    <div class="story-inner-bubble">
                         <img src="nun.jpg" alt="صورة القصة 1">
                         <h3>ذا نن</h3>
                         <p>بيقولو حلوة</p>
