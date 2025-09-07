@@ -288,13 +288,13 @@
             alert('مرحباً بك في دارك هاوس! استعد لتجربة مخيفة...');
         });
 
-        // عند الضغط على زر التفاصيل: رسالة ثم تحويل
+        // عند الضغط على زر التفاصيل: رسالة ثم تحويل في نفس علامة التبويب
         document.querySelectorAll('.details-btn').forEach(function(btn) {
             btn.addEventListener('click', function(e) {
                 e.preventDefault();
                 const url = btn.getAttribute('href');
                 alert('هل تجرؤ على قراءة هذه القصة؟ 👻');
-                window.open(url, '_blank');
+                window.location.href = url; // فتح في نفس علامة التبويب
             });
         });
     </script>
